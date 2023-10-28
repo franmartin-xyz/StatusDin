@@ -1,0 +1,33 @@
+{
+    "name": "StatusDin",
+    "version": "0.1.0",
+    "description": "Report your status in websites",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": [],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": [],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+        ],
+        "matches": []
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "StatusDin",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}

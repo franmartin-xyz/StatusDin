@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StatusDin</title>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAEcIPI2HX6saW9iTWHaoA7MttkkAPNnoM",
+      authDomain: "statusdin-90b74.firebaseapp.com",
+      databaseURL: "https://statusdin-90b74-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "statusdin-90b74",
+      storageBucket: "statusdin-90b74.appspot.com",
+      messagingSenderId: "303056806061",
+      appId: "1:303056806061:web:8f9cd0ffd31def4de4e624"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  <link href="popup.css" rel="stylesheet" type="text/css" />
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Title Section -->
+    <div class="title">
+      <h1>StatusDin</h1>
+    </div>
+
+    <!-- User Status Display -->
+    <div class="user-status-container" id="userStatusContainer">
+      <!-- User status elements will be populated here by popup.js -->
+    </div>
+
+    <!-- Manual Status Update Form -->
+    <div class="manual-update">
+      <h3>Update Your Status</h3>
+
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="Logged In">Logged In</option>
+        <option value="Logged Out">Logged Out</option>
+      </select>
+
+      <label for="websiteName">Website Name:</label>
+      <input type="text" id="websiteName" placeholder="Enter Website Name" />
+
+      <button id="updateStatusBtn">Update Status</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
